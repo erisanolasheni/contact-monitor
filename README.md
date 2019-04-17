@@ -1,0 +1,1 @@
+A simple django-based contacts management app tests and a simple python stream line monitoring app test

@@ -1,0 +1,18 @@
+{% extends 'contacts/master.html' %}
+{% block content %}
+
+<ul class="list-group">
+    {% if not contacts %}
+    <li class="list-group-item">No contacts available</li>
+    {% else %}
+    {% for ctxc in contacts %}
+    <li class="list-group-item">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{ ctxc.name }}</h5>
+            <small>{{ ctxc.email }}</small>
+        </div>
+    </li>
+    {% endfor %}
+    {% endif %}
+</ul>
+{% endblock %}

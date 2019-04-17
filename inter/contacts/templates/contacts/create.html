@@ -1,0 +1,19 @@
+{% extends 'contacts/master.html' %}
+{% block content %}
+        <form method="post">
+            <h1>Create New Contact</h1>
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="exampleInputName1">Name</label>
+                <input type="Name" name="name" class="form-control" id="exampleInputName1" placeholder="Name">
+                <small id="emailHelp" class="form-text text-muted text-red name-info"></small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted text-red email-info"></small>
+            </div>
+            <button type="submit" class="btn btn-primary">Create</button>
+        </form>
+{% endblock %}
